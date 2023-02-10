@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mission-deployment
+  labels:
+    app: mission
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mission
+  template:
+    metadata:
+      labels:
+          app: mission
+    spec:
+      containers:
+      - name: mission
+        image: registry.hub.docker.com/eladlevy14/mission:latest
+        ports:
+        - containerPort: 5000
+        imagePullPolicy: IfNotPresent

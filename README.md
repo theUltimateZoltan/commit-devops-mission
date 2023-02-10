@@ -17,4 +17,4 @@ This is how I got it done:
 ## What would I have done if I had more time?
 1. ci/cd, of course. I think a proper github action would have done nicely here.
 1. Change the container registry to a private one (like ECR). The docker hub pull limit is really annoying.
-1. change the service type to a load balancer, exposing a single IP address.
+1. change the service type to a load balancer, exposing a single IP address. I tried configuring such an ingress based on the controller installed with helm, but got stuck trying to configure it correctly.
